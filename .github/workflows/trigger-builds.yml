@@ -12,6 +12,6 @@ jobs:
       - name: Trigger workflow in Repo B
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.REPO_B_PAT }}
+          token: ${{ secrets.SECRET_TOKEN }}
           repository: tmpmachine/test-build
           event-type: deploy-from-submodule
