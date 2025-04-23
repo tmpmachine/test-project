@@ -1,0 +1,17 @@
+name: Trigger Deploy in Repo B
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger workflow in Repo B
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_B_PAT }}
+          repository: tmpmachine/test-build
+          event-type: deploy-from-submodule
