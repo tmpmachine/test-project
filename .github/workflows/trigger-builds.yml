@@ -14,4 +14,5 @@ jobs:
         with:
           token: ${{ secrets.SECRET_TOKEN }}
           repository: tmpmachine/test-build
-          event-type: deploy-from-submodule
+          event-type: remote-deploy
+          # event-type: deploy-from-submodule
